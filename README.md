@@ -10,6 +10,63 @@ A Python-based YouTube scraper using yt-dlp with proxy support, duplicate detect
 - Proxy rotation support (HTTP, SOCKS5, iCloud Private Relay)
 - FastAPI web interface
 
+## Quick Start
+
+### Prerequisites
+- Python 3.8+
+- Git
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/abd-km/ytscrape.git
+   cd ytscrape
+   ```
+
+2. **Create and activate virtual environment:**
+   ```bash
+   python3 -m venv venv
+   
+   # On macOS/Linux:
+   source venv/bin/activate
+   
+   # On Windows:
+   # venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Optional - Install FFmpeg (for audio conversion):**
+   - **macOS:** `brew install ffmpeg`
+   - **Ubuntu/Debian:** `sudo apt install ffmpeg`
+   - **Windows:** Download from [FFmpeg website](https://ffmpeg.org/download.html)
+
+### Running the Application
+
+```bash
+python ytscrp.py
+```
+
+Then open your browser and go to: `http://localhost:8000`
+
+### API Usage
+
+- **Web Interface:** `http://localhost:8000`
+- **Download Endpoint:** `POST /api/download`
+- **Status Check:** `GET /api/status/{task_id}`
+- **Real-time Updates:** WebSocket `/ws/{task_id}`
+
+### Download Options
+- Audio-only downloads (faster)
+- Video downloads with quality selection
+- Duplicate detection and skipping
+- Batch processing with limits
+- Real-time progress tracking
+
 ## yt-dlp Usage and Options
 
 ### USAGE AND OPTIONS
