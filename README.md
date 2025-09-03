@@ -67,6 +67,22 @@ Then open your browser and go to: `http://localhost:8000`
 - Batch processing with limits
 - Real-time progress tracking
 
+### Utilities
+
+#### IP Address Check
+Check your current IP address and location:
+```bash
+python3 check_ip.py
+```
+
+This utility displays:
+- External (public) IP address
+- Local network IP address
+- System hostname
+- Location information (country, region, city, ISP)
+
+Useful for verifying your connection when troubleshooting download issues.
+
 ## yt-dlp Usage and Options
 
 ### USAGE AND OPTIONS
